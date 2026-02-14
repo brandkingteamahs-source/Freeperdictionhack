@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>92PAK Predictor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <header class="header">
+            <div class="logo">92P<span>A</span>K PREDICTOR</div>
+        </header>
+
+        <section class="time-selector">
+            <div class="btn">1 MINUTE</div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-box">
+                <div class="label">STREAK</div>
+                <div id="currentStreak" class="value loss-color">--</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">ACCURACY</div>
+                <div id="accuracy" class="value yellow-color">--</div>
+            </div>
+            <div class="stat-box">
+                <div class="label">TOTAL BETS</div>
+                <div id="total" class="value cyan-color">0</div>
+            </div>
+        </section>
+
+        <section class="results">
+            <div class="result-box win-box">
+                WIN <span id="wins">0</span>
+            </div>
+            <div class="result-box loss-box">
+                LOSS <span id="losses">0</span>
+            </div>
+        </section>
+
+        <div class="prediction-header">NEXT PREDICTION</div>
+
+        <section class="prediction-box">
+            <p><label>TIME LEFT</label> : <span id="countdown" class="predict-value loss-color">Loading...</span></p>
+            <p><label>PERIOD</label> : <span id="nextPeriod" class="predict-value loss-color">Loading...</span></p>
+            <p><label>PREDICT</label> : <span id="nextPrediction" class="predict-value">Loading...</span></p>
+            <p><label>STRATEGY</label> : <span id="activeStrategy" class="predict-value" style="color: var(--color-accent);">Calculating...</span></p>
+        </section>
+
+        <div class="history-header">
+             <div class="history-title">HISTORY</div>
+             <button id="clearBtn"><i class="fa-solid fa-trash-can"></i> CLEAR ALL</button>
+        </div>
+        
+        <div id="historyList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
